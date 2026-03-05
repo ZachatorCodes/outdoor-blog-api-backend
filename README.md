@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains code for a RESTful API backend in order to manage all schema needed for an outdoor themed blog. 
+This project is a RESTful API backend server created with the Nest.js framework. It connects to a PostgreSQL database running through Docker using Prisma as an ORM in order to store information on articles, users, trails, and many more models related to an outdoor themed blogging website.
 
 ## Project setup
 
