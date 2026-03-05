@@ -79,18 +79,9 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Run tests
+## Run Tests
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
+To test the API, run the project and head to ```localhost:PORT/api``` Here, you will have a visual GUI of all endpoint, and the ability to test them.
 
 ## Deployment
 
@@ -118,19 +109,10 @@ Check out a few resources that may come in handy when working with NestJS:
 - To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
 - Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
-
 ## Technologies Used
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+[Nest.js](https://github.com/nestjs/nest)
+Docker Engine
+PostgreSQL
+Swagger
+Swagger Express
+Prisma
