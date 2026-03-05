@@ -15,6 +15,15 @@ $ npm install
 ```
 This will install all of the required npm packages.
 
+Afterwards, start Docker by running the following:
+```bash
+$ sudo service docker start
+
+# Check that you've done this process correctly by running:
+$ sudo service docker status
+# You should see something that says "* Docker is running"
+```
+
 ## Compile and run the project
 
 ```bash
