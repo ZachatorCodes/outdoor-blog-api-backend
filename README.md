@@ -6,9 +6,14 @@ This project is a RESTful API backend server created with the Nest.js framework.
 
 ## Project setup
 
+To run this API locally, you must have Docker Enginer installed on your local machine. The installation process for Docker Enginer (on Ubuntu) can be found [here](https://docs.docker.com/engine/install/ubuntu/).
+Then, fork and then clone this repository.
+
+Once the repository is downloaded, cd into the project directory and run:
 ```bash
 $ npm install
 ```
+This will install all of the required npm packages.
 
 ## Compile and run the project
 
