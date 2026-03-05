@@ -2,16 +2,72 @@
 
 ## Description
 
-This repository contains code for a RESTful API backend in order to manage all schema needed for an outdoor themed blog. 
+This project is a RESTful API backend server created with the Nest.js framework. It connects to a PostgreSQL database running through Docker, and uses Prisma as an ORM. This API has the ability to update information on articles, users, trails, and many more models related to an outdoor themed blogging website. This project was created with an outdoor themed blog in mind, which will connect to this API as its backend server.
 
-## Project setup
+## Environment Setup
 
+To run this API locally, you must have Docker Enginer installed on your local machine. The installation process for Docker Enginer (on Ubuntu) can be found [here](https://docs.docker.com/engine/install/ubuntu/).
+Then, fork and then clone this repository.
+
+---
+
+Once the repository is downloaded, cd into the project directory and run:
 ```bash
 $ npm install
 ```
+This will install all of the required npm packages.
 
-## Compile and run the project
+Now, open the folder in your favorite code editor.
 
+---
+
+Before you start the API server, there are a few more steps that need to be completed.
+
+First off, it is important to note that the ```docker-compose.yml``` file references environment variables. You must define those variables. Here's what I did:
+
+Create a .env file, and add three variables: DB_USER, DB_PASSWORD, and DB_URL.
+Your .env file should look something like this:
+```bash
+DB_USER="username"
+DB_PASSWORD="password"
+DATABASE_URL="protocol://[user]:[password]@[host]:[port]/[dbname]"
+```
+Note: Make sure to replace the contents of all variables to actual values.
+
+This should conclude the environment setup.
+
+## Project Setup
+
+At this point Docker Engine should be installed. Start Docker by running the following:
+```bash
+$ sudo service docker start
+```
+To check that Docker is running, run:
+```bash
+$ sudo service docker status
+```
+You should see something that says "* Docker is running"
+
+---
+
+In the same terminal window, run the following command:
+```bash
+docker compose up --build
+```
+This will start your an instance of PostgreSQL database through Docker.
+
+After that, in a new terminal window (still inside the project directory), run the following three commands:
+```bash
+$ npx prisma generate
+$ npx prisma migrate dev
+$ npx prisma db seed
+```
+
+This should generate a Prisma client folden inside of your src directory, migrate the schema, and seed the database.
+
+## Run The Project
+
+To run the project locally, run one of the following commands:
 ```bash
 # development
 $ npm run start
@@ -23,18 +79,9 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Run tests
+## Run Tests
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
+To test the API, run the project and head to ```localhost:PORT/api``` Here, you will have a visual GUI of all endpoint, and the ability to test them.
 
 ## Deployment
 
@@ -62,19 +109,11 @@ Check out a few resources that may come in handy when working with NestJS:
 - To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
 - Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
-
 ## Technologies Used
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+TypeScript
+[Nest.js](https://github.com/nestjs/nest)
+Docker Engine
+PostgreSQL
+Prisma ORM
+Swagger
+Swagger Express
