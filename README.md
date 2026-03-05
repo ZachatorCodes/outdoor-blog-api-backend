@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a RESTful API backend server created with the Nest.js framework. It connects to a PostgreSQL database running through Docker using Prisma as an ORM in order to store information on articles, users, trails, and many more models related to an outdoor themed blogging website.
+This project is a RESTful API backend server created with the Nest.js framework. It connects to a PostgreSQL database running through Docker, and uses Prisma as an ORM. This API has the ability to update information on articles, users, trails, and many more models related to an outdoor themed blogging website. This project was created with an outdoor themed blog in mind, which will connect to this API as its backend server.
 
 ## Project setup
 
