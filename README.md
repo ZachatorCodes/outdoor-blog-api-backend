@@ -4,10 +4,12 @@
 
 This project is a RESTful API backend server created with the Nest.js framework. It connects to a PostgreSQL database running through Docker, and uses Prisma as an ORM. This API has the ability to update information on articles, users, trails, and many more models related to an outdoor themed blogging website. This project was created with an outdoor themed blog in mind, which will connect to this API as its backend server.
 
-## Project setup
+## Environment Setup
 
 To run this API locally, you must have Docker Enginer installed on your local machine. The installation process for Docker Enginer (on Ubuntu) can be found [here](https://docs.docker.com/engine/install/ubuntu/).
 Then, fork and then clone this repository.
+
+---
 
 Once the repository is downloaded, cd into the project directory and run:
 ```bash
@@ -15,7 +17,28 @@ $ npm install
 ```
 This will install all of the required npm packages.
 
-Afterwards, start Docker by running the following:
+Now, open the folder in your favorite code editor.
+
+---
+
+Before you start the API server, there are a few more steps that need to be completed.
+
+First off, it is important to note that the ```docker-compose.yml``` file references environment variables. You must define those variables. Here's what I did:
+
+Create a .env file, and add three variables: DB_USER, DB_PASSWORD, and DB_URL.
+Your .env file should look something like this:
+```bash
+DB_USER="username"
+DB_PASSWORD="password"
+DATABASE_URL="protocol://[user]:[password]@[host]:[port]/[dbname]"
+```
+Note: Make sure to replace the contents of all variables to actual values.
+
+This should conclude the environment setup.
+
+## Project Setup
+
+At this point Docker Engine should be installed. Start Docker by running the following:
 ```bash
 $ sudo service docker start
 ```
@@ -27,10 +50,24 @@ You should see something that says "* Docker is running"
 
 ---
 
-Before
+In the same terminal window, run the following command:
+```bash
+docker compose up --build
+```
+This will start your an instance of PostgreSQL database through Docker.
 
-## Compile and run the project
+After that, in a new terminal window (still inside the project directory), run the following three commands:
+```bash
+$ npx prisma generate
+$ npx prisma migrate dev
+$ npx prisma db seed
+```
 
+This should generate a Prisma client folden inside of your src directory, migrate the schema, and seed the database.
+
+## Run The Project
+
+To run the project locally, run one of the following commands:
 ```bash
 # development
 $ npm run start
