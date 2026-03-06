@@ -111,10 +111,10 @@ Check out a few resources that may come in handy when working with NestJS:
 - Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
 
 ## Technologies Used
-TypeScript
-[Nest.js](https://github.com/nestjs/nest)
-Docker Engine
-PostgreSQL
-Prisma ORM
-Swagger
-Swagger Express
+* TypeScript
+* [Nest.js](https://github.com/nestjs/nest)
+* Docker Engine
+* PostgreSQL
+* Prisma ORM
+* Swagger
+* Swagger Express
