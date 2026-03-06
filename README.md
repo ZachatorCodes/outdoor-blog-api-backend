@@ -13,7 +13,7 @@ Then, fork and then clone this repository.
 
 Once the repository is downloaded, cd into the project directory and run:
 ```bash
-$ npm ci
+$ npm install
 ```
 This will install all of the required npm packages.
 
