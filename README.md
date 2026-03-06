@@ -82,7 +82,7 @@ $ npm run start:prod
 
 ## Run Tests
 
-To test the API, run the project and head to ```localhost:PORT/api``` Here, you will have a visual GUI of all endpoint, and the ability to test them.
+To test the API, run the project and head to ```http://localhost:3000/api```. Here, you will have a visual GUI of all endpoint, and the ability to test them.
 
 ## Deployment
 
