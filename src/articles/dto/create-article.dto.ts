@@ -4,12 +4,12 @@ export class CreateArticleDto {
   @ApiProperty()
   title: string;
 
-  @ApiProperty({ required: false })
+  @ApiProperty({required: false})
   description?: string;
 
   @ApiProperty()
   body: string;
 
-  @ApiProperty()
+  @ApiProperty({default: false})
   published: boolean = false;
 }
