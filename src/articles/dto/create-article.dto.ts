@@ -1,15 +1,15 @@
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateArticleDto {
-  @ApiProperty()
+  @ApiProperty({description: 'The title of the article', example: 'My First Article'})
   title: string;
 
-  @ApiProperty({required: false})
+  @ApiProperty({required: false, description: 'A brief description of the article', example: 'This is a brief description of my first article'})
   description?: string;
 
-  @ApiProperty()
+  @ApiProperty({description: 'The main content of the article', example: 'This is the main content of my first article'})
   body: string;
 
-  @ApiProperty({default: false})
+  @ApiProperty({default: false, description: 'Whether the article is published', example: false})
   published: boolean = false;
 }
