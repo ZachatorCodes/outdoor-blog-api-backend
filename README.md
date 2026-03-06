@@ -52,8 +52,8 @@ You should see something that says "* Docker is running"
 
 In the same terminal window, run the following command two commands:
 ```bash
-docker compose down -v
-docker compose up --build
+$ docker compose down -v
+$ docker compose up --build
 ```
 Compose down will make sure that you are building from a clean slate, and then compose up will start your an instance of PostgreSQL database through Docker.
 
